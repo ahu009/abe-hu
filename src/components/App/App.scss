@@ -2,7 +2,7 @@
 
 .container {
   font-family: sans-serif;
-  
+
   img.me {
   /* Set rules to fill background */
   min-height: 100%;
@@ -17,6 +17,28 @@
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.infotab {
+  padding-left: 50px;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
 }
 
   @media screen and (max-width: 1024px) { /* Specific to this particular image */

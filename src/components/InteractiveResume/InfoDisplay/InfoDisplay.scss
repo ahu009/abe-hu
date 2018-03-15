@@ -1,26 +1,38 @@
-@import './../_variables.scss';
+@import './../../_variables.scss';
 
- .button {
-    color: $container;
-    background-color: 'ghostwhite';
-    border-radius: 8px;
-    border-color: $container;
-    border-width: 1.5px;
-    border-style: solid;
-    padding: 7px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 10px;
-    margin-right: 10px;
-    -webkit-transition: background-color 0.5s, color 0.5s ; 
+ .container {
+   min-width: 150px;
 
-   &:hover {
-     background-color: $container;
-     color: white;
-   }
+   width: 48%;
+   height: 80%;
 
-   &:focus {
-     outline: none;
-   }
+   position: fixed;
+   top: 13%;
+   right: 13%;
+
+   opacity: 0.01;
+   // background-color: #DAE2F5;
+   background-color: #F7F7F7;
+   border-radius: 10px;
+   transition: all 750ms ease-in-out;
+   transition-delay: 650ms;
+ }
+
+ .showContainer {
+   min-width: 150px;
+
+   width: 48%;
+   height: 80%;
+
+   position: fixed;
+   top: 13%;
+   right: 15%;
+
+   // background-color: #DAE2F5;
+   background-color: #F7F7F7;
+   border-radius: 10px;
+
+   opacity: 0.8;
+   transition: all 750ms ease-in-out;
+   transition-delay: 650ms;
  }

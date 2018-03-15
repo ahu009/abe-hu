@@ -3,6 +3,7 @@ import React from 'react';
 import style from './App.scss';
 import AboutMe from './../AboutMe';
 import NavBar from './../InteractiveResume/NavBar';
+import InfoDisplay from './../InteractiveResume/InfoDisplay';
 import Name from './../Name/Name';
 import YosemiteAndMe from './assets/test.jpg';
 
@@ -10,7 +11,7 @@ import YosemiteAndMe from './assets/test.jpg';
  * App Component
  * @type {Class}
  */
-export default class App extends React.Component {
+class App extends React.Component {
   /**
    * Render function for App Component
    * @return {JSX} Component to render
@@ -22,7 +23,10 @@ export default class App extends React.Component {
         <Name />
         <AboutMe />
         <NavBar />
+        <InfoDisplay className={style.infotab} />
       </div>
     );
   }
 }
+
+export default App

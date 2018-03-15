@@ -1,13 +1,19 @@
 import React from 'react';
 import style from './SocialMedia.scss';
-import { SocialIcon } from 'react-social-icons';
+import FontAwesome from 'react-fontawesome';
 
+import resume from './assets/Abe_Hu_Resume.pdf';
 
 /**
  * UI Component
  * @type {Class}
  */
 class SocialMedia extends React.Component {
+
+  navigate (url) {
+    window.location.href = url
+  }
+
   /**
    * Render function for UIComponent Component
    * @return {JSX} Component to render
@@ -16,8 +22,12 @@ class SocialMedia extends React.Component {
 
     return (
       <div className={style.container}>
-        <SocialIcon className={style.linkedin} color='#89ABCE' style={{width: 30, height: 30}} url="https://www.linkedin.com/in/abe-hu-4a0b86102/" />
-        <SocialIcon className={style.github} color='#89ABCE' style={{width: 30, height: 30}} url="https://github.com/ahu009" />
+        <div className={style.social}>
+          <FontAwesome className={style.linkedin} name="linkedin-square" onClick={() => this.navigate('https://www.linkedin.com/in/abe-hu-4a0b86102/')}/>
+          <FontAwesome className={style.github} name="github-square" onClick={() => this.navigate('https://github.com/ahu009')}/>
+          <FontAwesome className={style.email} name="envelope-square" onClick={() => window.open('mailto:abehu88888@gmail.com')}/>
+          <FontAwesome className={style.paperclip} name="paperclip" onClick={() => window.open(resume)}/>
+        </div>
       </div>
     );
   }

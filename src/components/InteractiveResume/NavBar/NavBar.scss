@@ -7,11 +7,31 @@
    height: 80%;
 
    position: fixed;
-   top: 10%;
-   left: 15%;
+   top: 13%;
+   left: 13%;
+
+   opacity: 0.01;
 
    // background-color: #DAE2F5;
    background-color: #F7F7F7;
    border-radius: 10px;
+   transition: all 750ms ease-in-out;
+ }
 
+ .showContainer {
+   min-width: 150px;
+
+   width: 20%;
+   height: 80%;
+
+   position: fixed;
+   top: 13%;
+   left: 15%;
+
+   opacity: 0.8;
+
+   // background-color: #DAE2F5;
+   background-color: #F7F7F7;
+   border-radius: 10px;
+   transition: all 750ms ease-in-out;
  }

@@ -1,7 +1,7 @@
 import React from 'react';
-import style from './InfoDisplay.scss';
+import { connect } from 'react-redux'
 
-import { Button } from 'react-bootstrap';
+import style from './InfoDisplay.scss';
 
 /**
  * UI Component
@@ -32,12 +32,15 @@ class InfoDisplay extends React.Component {
    * @return {JSX} Component to render
    */
   render () {
-    const clicked = this.state.clicked;
-
     return (
-      <Button bsClass={style.button}> About Me </Button>
+      <div className={this.props.resume && this.props.resume === true ? style.showContainer : style.container}>
+      </div>
     );
   }
 }
+ 
+const mapStateToProps = state => ({
+  resume: state.shouldShowResume || {},
+})
 
-export default InfoDisplay;
+export default connect(mapStateToProps)(InfoDisplay)

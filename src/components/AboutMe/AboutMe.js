@@ -17,16 +17,21 @@ class AboutMe extends React.Component {
    */
   constructor (props) {
     super(props);
-    this.state = { clicked: true };
+    this.state = {
+      transitionOnMount: true,
+    }
     this.toggleShowResume = this.toggleShowResume.bind(this);
   }
 
+  componentDidMount () {
+    setTimeout(() => this.setState({transitionOnMount: false}), 50)
+  }
   /**
    * Toggle
    * @return {void}
    */
   toggleShowResume () {
-    this.props.setShowResume(true).then(() => console.log(this.props.resume));
+    this.props.resume === true ? this.props.setShowResume(false) : this.props.setShowResume(true);
   }
 
   /**
@@ -34,10 +39,23 @@ class AboutMe extends React.Component {
    * @return {JSX} Component to render
    */
   render () {
-    const clicked = this.state.clicked;
+    let showResume = this.props.resume && this.props.resume === true;
 
     return (
-      <Button bsClass={style.button} onClick={this.toggleShowResume}> About Me </Button>
+      <div>
+        <Button
+          bsClass={showResume ? style.shown2 : style.hidden2}
+          onClick={this.toggleShowResume}
+          disabled={showResume ? false : true}>
+          Close
+        </Button>
+        <Button
+          bsClass={showResume || this.state.transitionOnMount ? style.hidden1 : style.shown1}
+          onClick={this.toggleShowResume}
+          disabled={showResume ? true : false}>
+          Get To Know Me
+        </Button>
+      </div>
     );
   }
 }
@@ -47,7 +65,7 @@ const mapStateToProps = state => ({
 })
  
 const mapDispatchToProps = dispatch => ({
-  setShowResume: shouldShow => dispatch(setShowResume(true))
+  setShowResume: shouldShow => dispatch(setShowResume(shouldShow))
 })
  
 export default connect(mapStateToProps, mapDispatchToProps)(AboutMe)
