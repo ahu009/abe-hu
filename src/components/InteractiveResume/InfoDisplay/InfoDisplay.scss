@@ -1,0 +1,26 @@
+@import './../_variables.scss';
+
+ .button {
+    color: $container;
+    background-color: 'ghostwhite';
+    border-radius: 8px;
+    border-color: $container;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 7px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    -webkit-transition: background-color 0.5s, color 0.5s ; 
+
+   &:hover {
+     background-color: $container;
+     color: white;
+   }
+
+   &:focus {
+     outline: none;
+   }
+ }

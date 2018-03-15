@@ -1,11 +1,13 @@
 import React from 'react';
-import style from './UIComponent.scss';
+import style from './InfoDisplay.scss';
+
+import { Button } from 'react-bootstrap';
 
 /**
  * UI Component
  * @type {Class}
  */
-class UIComponent extends React.Component {
+class InfoDisplay extends React.Component {
   /**
    * Constructor for UI Component
    * @param  {Object} props  Props passed to this class
@@ -22,7 +24,7 @@ class UIComponent extends React.Component {
    * @return {void}
    */
   toggle () {
-    this.setState({clicked: !this.state.clicked});
+    // this.setState({clicked: !this.state.clicked});
   }
 
   /**
@@ -33,13 +35,9 @@ class UIComponent extends React.Component {
     const clicked = this.state.clicked;
 
     return (
-      <div className={style.container} onClick={this.toggle}>
-        <p className={style.text}>
-          {clicked ? 'Hello' : 'World'}
-        </p>
-      </div>
+      <Button bsClass={style.button}> About Me </Button>
     );
   }
 }
 
-export default UIComponent;
+export default InfoDisplay;

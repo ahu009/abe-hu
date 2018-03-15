@@ -1,7 +1,10 @@
 import React from 'react';
 
 import style from './App.scss';
-import UIComponent from './../UIComponent';
+import AboutMe from './../AboutMe';
+import NavBar from './../InteractiveResume/NavBar';
+import Name from './../Name/Name';
+import YosemiteAndMe from './assets/test.jpg';
 
 /**
  * App Component
@@ -15,7 +18,10 @@ export default class App extends React.Component {
   render () {
     return (
       <div className={style.container}>
-        <UIComponent />
+        <img alt='It is me' className={style.me} src={YosemiteAndMe} />
+        <Name />
+        <AboutMe />
+        <NavBar />
       </div>
     );
   }

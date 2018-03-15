@@ -1,0 +1,20 @@
+@import './../../../_variables.scss';
+
+.container {
+  width: 100%;
+  text-align: center;
+  top: 10%;
+
+  .linkedin {
+    margin-right: 20px;
+    &:hover {
+      background-color: white;
+      margin-right: 40px;
+    }
+  }
+
+  .github {
+
+  }
+
+}
