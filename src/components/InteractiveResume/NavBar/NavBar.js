@@ -5,11 +5,17 @@ import style from './NavBar.scss';
 import SocialMedia from './SocialMedia/SocialMedia';
 import NavItems from './NavItems/NavItems';
 import Picture from './Picture/Picture';
+import { setActiveTab } from '../../../actions';
+
 /**
  * UI Component
  * @type {Class}
  */
 class NavBar extends React.Component {
+  componentWillMount () {
+    this.props.setActiveTab('about');
+  }
+
   /**
    * Render function for UIComponent Component
    * @return {JSX} Component to render
@@ -30,4 +36,8 @@ const mapStateToProps = state => ({
   resume: state.shouldShowResume || {},
 })
 
-export default connect(mapStateToProps)(NavBar)
+const mapDispatchToProps = dispatch => ({
+  setActiveTab: active => dispatch(setActiveTab(active))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

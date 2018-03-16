@@ -1,14 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-import style from './InfoDisplay.scss';
+import style from './About.scss';
 
-import About from './About/About';
 /**
  * UI Component
  * @type {Class}
  */
-class InfoDisplay extends React.Component {
+class About extends React.Component {
   /**
    * Constructor for UI Component
    * @param  {Object} props  Props passed to this class
@@ -35,7 +34,6 @@ class InfoDisplay extends React.Component {
   render () {
     return (
       <div className={this.props.resume && this.props.resume === true ? style.showContainer : style.container}>
-        <About />
       </div>
     );
   }
@@ -45,4 +43,4 @@ const mapStateToProps = state => ({
   resume: state.shouldShowResume || {},
 })
 
-export default connect(mapStateToProps)(InfoDisplay)
+export default connect(mapStateToProps)(About)

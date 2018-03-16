@@ -32,15 +32,16 @@ class NavItems extends React.Component {
    * @return {JSX} Component to render
    */
   render () {
+    let activeTab = this.props.resume.active;
 
     return (
       <div className={style.container}>
         <hr className={style.fancy_line}></hr>
         <ul className={style.list}>
-          <li><a onClick={() => this.props.setActiveTab('about')}>About Me</a></li>
-          <li><a onClick={() => this.props.setActiveTab('experience')}>Experience</a></li>
-          <li><a onClick={() => this.props.setActiveTab('projects')}>Projects</a></li>
-          <li><a onClick={() => this.props.setActiveTab('skills')}>Skills</a></li>
+          <li><a className={activeTab === 'about' ? style.active : style.inactive} onClick={() => this.props.setActiveTab('about')}>About Me</a></li>
+          <li><a className={activeTab === 'experience' ? style.active : style.inactive} onClick={() => this.props.setActiveTab('experience')}>Experience</a></li>
+          <li><a className={activeTab === 'projects' ? style.active : style.inactive} onClick={() => this.props.setActiveTab('projects')}>Projects</a></li>
+          <li><a className={activeTab === 'skills' ? style.active : style.inactive} onClick={() => this.props.setActiveTab('skills')}>Skills</a></li>
         </ul>
       </div>
     );
@@ -48,7 +49,7 @@ class NavItems extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  resume: state.shouldShowResume || {},
+  resume: state || {},
 })
  
 const mapDispatchToProps = dispatch => ({

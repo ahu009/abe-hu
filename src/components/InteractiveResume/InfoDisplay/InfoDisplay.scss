@@ -3,12 +3,12 @@
  .container {
    min-width: 150px;
 
-   width: 48%;
+   width: 65%;
    height: 80%;
 
    position: fixed;
    top: 13%;
-   right: 13%;
+   right: 5%;
 
    opacity: 0.01;
    // background-color: #DAE2F5;
@@ -19,20 +19,23 @@
  }
 
  .showContainer {
+   margin-left: 15px;
    min-width: 150px;
 
-   width: 48%;
+   width: 65%;
    height: 80%;
 
    position: fixed;
    top: 13%;
-   right: 15%;
+   right: 7%;
 
    // background-color: #DAE2F5;
    background-color: #F7F7F7;
    border-radius: 10px;
 
-   opacity: 0.8;
+   opacity: 0.9;
    transition: all 750ms ease-in-out;
    transition-delay: 650ms;
+   overflow-x: scroll;
+   overflow-y: scroll;
  }
