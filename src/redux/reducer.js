@@ -6,6 +6,12 @@ const resume = (state = {}, action) => {
         shouldShowResume: action.shouldShowResume,
       }
     }
+    case 'SET_ACTIVE_TAB': {
+      return {
+        ...state,
+        active: action.active,
+      }
+    }
     default:
       return state
   }

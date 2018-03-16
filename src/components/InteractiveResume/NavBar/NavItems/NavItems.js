@@ -1,5 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux'
+
 import style from './NavItems.scss';
+import { setActiveTab } from '../../../../actions';
 
 /**
  * UI Component
@@ -34,14 +37,22 @@ class NavItems extends React.Component {
       <div className={style.container}>
         <hr className={style.fancy_line}></hr>
         <ul className={style.list}>
-          <li><a onClick={() => {}}>About Me</a></li>
-          <li><a onClick={() => {}}>Experience</a></li>
-          <li><a onClick={() => {}}>Projects</a></li>
-          <li><a onClick={() => {}}>Skills</a></li>
+          <li><a onClick={() => this.props.setActiveTab('about')}>About Me</a></li>
+          <li><a onClick={() => this.props.setActiveTab('experience')}>Experience</a></li>
+          <li><a onClick={() => this.props.setActiveTab('projects')}>Projects</a></li>
+          <li><a onClick={() => this.props.setActiveTab('skills')}>Skills</a></li>
         </ul>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  resume: state.shouldShowResume || {},
+})
  
-export default NavItems;
+const mapDispatchToProps = dispatch => ({
+  setActiveTab: active => dispatch(setActiveTab(active))
+})
+ 
+export default connect(mapStateToProps, mapDispatchToProps)(NavItems)
