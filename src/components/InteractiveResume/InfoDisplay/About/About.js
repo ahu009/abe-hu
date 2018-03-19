@@ -48,7 +48,7 @@ class About extends React.Component {
           <img alt='It is me' className={style.ucr} src={ucr} />
           <div className={style.aboutText2}>
             <p className={style.schoolTitle}> University of California, Riverside </p>
-            <p style={{color: '#98937D'}}> BS Computer Science </p>
+            <p style={{color: '#98937D'}}> BS Computer Science, June 2018 </p>
             <p> Major GPA: 3.8 </p>
             <p> Cumulative GPA: 3.66 </p>
             <p> 8x Deans Honor List, Chancellors Honors List </p>

@@ -8,17 +8,61 @@
 
 
 .education {
-  display: block;
-  flex-direction: row;
-  .ucr {
-    border-radius: 200px;
+  display: table;
+  flex-direction: column;
+  padding-bottom: 20px;
+  .container {
+    position: relative;
+    border-radius: 20px;
     margin-left: 20px;
     float: left;
+    .intuit {
+      width: 180px;
+      height: 180px;
+      max-width: 180px;
+      max-height: 180px;
+      width: 100%;
+      display: block;
+      opacity: 1;
+    }
+    &:hover .button {
+      opacity: 1;
+    }
+
+    &:hover .intuit {
+      opacity: 0.3;
+      background: rgba(0, 0, 0, .3);
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, .3);
+    }
+
+    .button {
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      position: absolute;
+      transition: all 0.5s ease;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      opacity: 0;
+      color: $container;
+      background-color: 'ghostwhite';
+      border-radius: 8px;
+      border-color: $container;
+      border-width: 1.5px;
+      border-style: solid;
+      padding: 7px;
+      outline: none;
+     cursor: pointer;
+    }
+
   }
 
+
   .aboutText2 {
-    padding: 1em 0;
-    margin-left: 320px;
+    margin-left: 230px;
     p {margin-top: 0; margin-bottom: 0}
     .schoolTitle {
       color: $container;
@@ -29,6 +73,9 @@
 
 }
 
+
+
+
 .titlebox {
     display:table;
     width:70%;
@@ -37,7 +84,7 @@
     opacity: 1;
     transition: opacity 800ms ease-in-out, margin-right 800ms ease-in-out;
     transition-delay: 600ms;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .titlebox span {
     display:table-cell;

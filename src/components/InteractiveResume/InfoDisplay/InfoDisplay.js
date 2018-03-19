@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 import style from './InfoDisplay.scss';
 
 import About from './About/About';
+import Experience from './Experience/Experience';
+import Projects from './Projects/Projects';
+
 /**
  * UI Component
  * @type {Class}
@@ -34,15 +37,17 @@ class InfoDisplay extends React.Component {
    */
   render () {
     return (
-      <div className={this.props.resume && this.props.resume === true ? style.showContainer : style.container}>
-        <About />
+      <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainer : style.container}>
+        {this.props.resume.active === 'about' ? <About /> : null}
+        {this.props.resume.active === 'experience' ? <Experience /> : null}
+        {this.props.resume.active === 'projects' ? <Projects /> : null}
       </div>
     );
   }
 }
  
 const mapStateToProps = state => ({
-  resume: state.shouldShowResume || {},
+  resume: state || {},
 })
 
 export default connect(mapStateToProps)(InfoDisplay)

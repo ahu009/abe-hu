@@ -6,19 +6,29 @@
   padding-right: 20px;
 }
 
+.educationHide {
+  opacity: 0;
+  padding-left: 30px;
+}
 
 .education {
-  display: block;
-  flex-direction: row;
-  .ucr {
-    border-radius: 200px;
+  display: table;
+  flex-direction: column;
+  padding-bottom: 20px;
+  opacity: 1;
+  transition: opacity 800ms ease-in-out, padding-left 800ms ease-in-out;
+  .intuit {
+    border-radius: 20px;
     margin-left: 20px;
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
+    max-height: 180px;
     float: left;
   }
 
   .aboutText2 {
-    padding: 1em 0;
-    margin-left: 320px;
+    margin-left: 230px;
     p {margin-top: 0; margin-bottom: 0}
     .schoolTitle {
       color: $container;
@@ -35,10 +45,20 @@
     position: inherit;
     margin: 0 auto;
     opacity: 1;
-    transition: opacity 800ms ease-in-out, margin-right 800ms ease-in-out;
-    transition-delay: 600ms;
-    padding-bottom: 10px;
+    transition: opacity 800ms ease-in-out, padding-left 800ms ease-in-out;
+    padding-bottom: 20px;
 }
+
+.titleboxHide {
+    display:table;
+    width:70%;
+    position: inherit;
+    margin: 0 auto;
+    opacity: 0;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
 .titlebox span {
     display:table-cell;
     text-align:center;
