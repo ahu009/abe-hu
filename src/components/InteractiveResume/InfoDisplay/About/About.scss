@@ -6,10 +6,21 @@
   padding-right: 20px;
 }
 
+.educationHide {
+  opacity: 0;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  .container {
+    display: none;
+  }
+}
 
 .education {
-  display: block;
-  flex-direction: row;
+  display: table;
+  flex-direction: column;
+  opacity: 1;
+  padding-bottom: 20px;
+  transition: all 800ms ease-in-out;
   .ucr {
     border-radius: 200px;
     margin-left: 20px;

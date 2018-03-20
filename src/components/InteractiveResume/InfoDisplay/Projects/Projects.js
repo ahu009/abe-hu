@@ -17,6 +17,21 @@ import FontAwesome from 'react-fontawesome';
  */
 class Projects extends React.Component {
   /**
+   * Constructor for UI Component
+   * @param  {Object} props  Props passed to this class
+   * @return {void}
+   */
+  constructor (props) {
+    super(props);
+    this.state = {
+      transitionBody: false,
+    };
+  }
+
+  componentDidMount () {
+    setTimeout(() => this.setState({transitionBody: true}), 1050);
+  }
+  /**
    * Toggle
    * @return {void}
    */
@@ -32,7 +47,7 @@ class Projects extends React.Component {
     return (
       <div>
         <div className={style.titlebox}><span>My Creations</span></div>
-        <div className={style.education}>
+        <div className={this.state.transitionBody ? style.education : style.educationHide}>
           <div className={style.container}>
             <img alt='DoodlyDoo' className={style.intuit} src="https://i.imgur.com/k3OP6Kf.gif" />
             <Button bsClass={style.button} onClick={() => this.navigate('https://github.com/ahu009/DoodlyDoo')}>
@@ -48,7 +63,7 @@ class Projects extends React.Component {
           </div>
         </div>
 
-        <div className={style.education}>
+        <div className={this.state.transitionBody ? style.education : style.educationHide}>
           <div className={style.container}>
             <img alt='PostPin' className={style.intuit} src={PostPin} />
             <Button bsClass={style.button} onClick={() => this.navigate('https://github.com/ahu009/PostPin')}>
@@ -63,7 +78,7 @@ class Projects extends React.Component {
           </div>
         </div>
 
-        <div className={style.education}>
+        <div className={this.state.transitionBody ? style.education : style.educationHide}>
           <div className={style.container}>
             <img alt='Personal-Website' className={style.intuit} src={Personal} />
             <Button bsClass={style.button} onClick={() => this.navigate('https://github.com/ahu009/abe-hu')}>
@@ -78,7 +93,7 @@ class Projects extends React.Component {
           </div>
         </div>
 
-        <div className={style.education}>
+        <div className={this.state.transitionBody ? style.education : style.educationHide}>
           <div className={style.container}>
             <img alt='120' className={style.intuit} src={CS120B} />
             <Button bsClass={style.button} onClick={() => this.navigate('https://github.com/ahu009/CS120B_Final')}>

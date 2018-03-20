@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux'
 
 import style from './Experience.scss';
 import intuit from './assets/intuit.png';
@@ -21,13 +20,11 @@ class Experience extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      transitionHeader: false,
       transitionBody: false,
     };
   }
 
   componentDidMount () {
-    setTimeout(() => this.setState({transitionHeader: true}), 200);
     setTimeout(() => this.setState({transitionBody: true}), 1000);
   }
 
@@ -38,7 +35,7 @@ class Experience extends React.Component {
   render () {
     return (
       <div>
-        <div className={this.state.transitionHeader ? style.titlebox : style.titleboxHide}><span>My Professional Journey</span></div>
+        <div className={style.titlebox}><span>My Professional Journey</span></div>
         <div className={this.state.transitionBody ? style.education : style.educationHide}>
           <img alt='Intuit' className={style.intuit} src={SI} />
           <div className={style.aboutText2}>
@@ -98,9 +95,5 @@ class Experience extends React.Component {
     );
   }
 }
- 
-const mapStateToProps = state => ({
-  resume: state.shouldShowResume || {},
-})
 
-export default connect(mapStateToProps)(Experience)
+export default Experience;

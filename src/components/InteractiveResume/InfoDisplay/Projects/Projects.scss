@@ -6,11 +6,19 @@
   padding-right: 20px;
 }
 
+.educationHide {
+  opacity: 0;
+  padding-left: 30px;
+  .container {
+    display: none;
+  }
+}
 
 .education {
   display: table;
   flex-direction: column;
   padding-bottom: 20px;
+  transition: opacity 800ms ease-in-out, padding-left 800ms ease-in-out;
   .container {
     position: relative;
     border-radius: 20px;
@@ -24,6 +32,7 @@
       width: 100%;
       display: block;
       opacity: 1;
+      transition: all 0.5s ease;
     }
     &:hover .button {
       opacity: 1;
@@ -73,19 +82,17 @@
 
 }
 
-
-
-
 .titlebox {
     display:table;
     width:70%;
-    position: inherit;
+    position: initial;
     margin: 0 auto;
     opacity: 1;
-    transition: opacity 800ms ease-in-out, margin-right 800ms ease-in-out;
+    transition: all800ms ease-in-out;
     transition-delay: 600ms;
     padding-bottom: 20px;
 }
+
 .titlebox span {
     display:table-cell;
     text-align:center;

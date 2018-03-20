@@ -27,10 +27,12 @@
     "bootstrap": "^4.0.0",
     "nvm": "0.0.4",
     "react": "15.6.1",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "15.4.2",
     "react-fontawesome": "^1.6.1",
     "react-redux": "^5.0.4",
+    "react-transition-group": "^2.2.1",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0"

@@ -1,5 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { Transition } from 'react-transition-group';
+
 
 import style from './InfoDisplay.scss';
 
@@ -12,35 +14,73 @@ import Projects from './Projects/Projects';
  * @type {Class}
  */
 class InfoDisplay extends React.Component {
-  /**
-   * Constructor for UI Component
-   * @param  {Object} props  Props passed to this class
-   * @return {void}
-   */
-  constructor (props) {
-    super(props);
-    this.state = { clicked: true };
-    this.toggle = this.toggle.bind(this);
-  }
 
-  /**
-   * Toggle
-   * @return {void}
-   */
-  toggle () {
-    // this.setState({clicked: !this.state.clicked});
-  }
 
+  componentDidUpdate() {
+    var display = document.getElementById("wtfamidoing");
+    display.scrollIntoView({block: 'end',  behavior: 'smooth'});
+  }
   /**
    * Render function for UIComponent Component
    * @return {JSX} Component to render
    */
   render () {
+    const duration = 550;
+
+    const defaultStyle = {
+      transition: `all ${duration}ms ease-in-out`,
+      opacity: 0,
+      left: 0,
+      width: '100%',
+      position: 'absolute',
+    };
+
+    const transitionStyles = {
+      entering: { opacity: 0, paddingLeft: 20, left: 1},
+      entered: { opacity: 1, paddingLeft: 0, left: 0},
+      exiting: { opacity: 0, paddingRight: 20, left: -1}
+    };
+
     return (
       <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainer : style.container}>
-        {this.props.resume.active === 'about' ? <About /> : null}
-        {this.props.resume.active === 'experience' ? <Experience /> : null}
-        {this.props.resume.active === 'projects' ? <Projects /> : null}
+        <div id="wtfamidoing"></div>
+        <Transition in={this.props.resume.active === "experience"}
+          timeout={duration}
+          unmountOnExit>
+          {(state) => (
+            <div style={{
+              ...defaultStyle,
+              ...transitionStyles[state]
+            }}>
+              <Experience />
+            </div>
+          )}
+        </Transition>
+          <Transition in={this.props.resume.active === "about"}
+            timeout={duration}
+            unmountOnExit>
+            {(state) => (
+              <div style={{
+                ...defaultStyle,
+                ...transitionStyles[state]
+              }}>
+                <About />
+              </div>
+            )}
+          </Transition>
+
+          <Transition in={this.props.resume.active === "projects"}
+            timeout={duration}
+            unmountOnExit>
+            {(state) => (
+              <div style={{
+                ...defaultStyle,
+                ...transitionStyles[state]
+              }}>
+                <Projects />
+              </div>
+            )}
+          </Transition>
       </div>
     );
   }

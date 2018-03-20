@@ -42,20 +42,10 @@
 .titlebox {
     display:table;
     width:70%;
-    position: inherit;
+    position: initial;
     margin: 0 auto;
     opacity: 1;
     transition: opacity 800ms ease-in-out, padding-left 800ms ease-in-out;
-    padding-bottom: 20px;
-}
-
-.titleboxHide {
-    display:table;
-    width:70%;
-    position: inherit;
-    margin: 0 auto;
-    opacity: 0;
-    padding-left: 30px;
     padding-bottom: 20px;
 }
 
