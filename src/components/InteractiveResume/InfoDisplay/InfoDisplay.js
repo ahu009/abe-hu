@@ -8,6 +8,7 @@ import style from './InfoDisplay.scss';
 import About from './About/About';
 import Experience from './Experience/Experience';
 import Projects from './Projects/Projects';
+import Skills from './Skills/Skills';
 
 /**
  * UI Component
@@ -25,7 +26,7 @@ class InfoDisplay extends React.Component {
    * @return {JSX} Component to render
    */
   render () {
-    const duration = 550;
+    const duration = 500;
 
     const defaultStyle = {
       transition: `all ${duration}ms ease-in-out`,
@@ -78,6 +79,19 @@ class InfoDisplay extends React.Component {
                 ...transitionStyles[state]
               }}>
                 <Projects />
+              </div>
+            )}
+          </Transition>
+
+          <Transition in={this.props.resume.active === "skills"}
+            timeout={duration}
+            unmountOnExit>
+            {(state) => (
+              <div style={{
+                ...defaultStyle,
+                ...transitionStyles[state]
+              }}>
+                <Skills />
               </div>
             )}
           </Transition>

@@ -29,7 +29,7 @@ class Projects extends React.Component {
   }
 
   componentDidMount () {
-    setTimeout(() => this.setState({transitionBody: true}), 1050);
+    setTimeout(() => this.setState({transitionBody: true}), 900);
   }
   /**
    * Toggle
@@ -65,7 +65,7 @@ class Projects extends React.Component {
 
         <div className={this.state.transitionBody ? style.education : style.educationHide}>
           <div className={style.container}>
-            <img alt='PostPin' className={style.intuit} src={PostPin} />
+            <img alt='PostPin' className={style.intuit} src="https://i.imgur.com/rMnXxkj.gif" />
             <Button bsClass={style.button} onClick={() => this.navigate('https://github.com/ahu009/PostPin')}>
               Github
               <FontAwesome style={{paddingLeft: 10, fontSize: 20}}name="github-alt"/>
@@ -80,7 +80,7 @@ class Projects extends React.Component {
 
         <div className={this.state.transitionBody ? style.education : style.educationHide}>
           <div className={style.container}>
-            <img alt='Personal-Website' className={style.intuit} src={Personal} />
+            <img alt='PostPin' className={style.intuit} src="https://i.imgur.com/g5qXxbP.gif" />
             <Button bsClass={style.button} onClick={() => this.navigate('https://github.com/ahu009/abe-hu')}>
               Github
               <FontAwesome style={{paddingLeft: 10, fontSize: 20}}name="github-alt"/>

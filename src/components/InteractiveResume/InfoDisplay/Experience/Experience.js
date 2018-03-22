@@ -81,7 +81,7 @@ class Experience extends React.Component {
         <div className={this.state.transitionBody ? style.education : style.educationHide}>
           <img alt='Intuit' className={style.intuit} src={idtech} />
           <div className={style.aboutText2}>
-            <p className={style.schoolTitle}> Intuit </p>
+            <p className={style.schoolTitle}> iD Tech </p>
             <p style={{color: '#679369'}}> Programming Instructor, 2015 </p>
             <p> Courses Taught: </p>
             <div style={{marginLeft: 20}}>

@@ -24,7 +24,7 @@ class AboutMe extends React.Component {
   }
 
   componentDidMount () {
-    setTimeout(() => this.setState({transitionOnMount: false}), 50)
+    setTimeout(() => this.setState({transitionOnMount: false}), 0)
   }
   /**
    * Toggle
