@@ -9,9 +9,7 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    libraryTarget: 'umd',
-    publicPath: './',
-    path: path.join(__dirname, 'dist'),
+    path: __dirname,
     filename: 'Navbar-ui.js'
   },
   resolve: {
