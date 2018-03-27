@@ -1,0 +1,68 @@
+@import './../../../_variables.scss';
+
+.container {
+  width: 100%;
+  text-align: center;
+  top: 10%;
+
+  .social {
+    color: 'grey';
+    border-radius: 3px;
+    font-size: 25px;
+
+    .linkedin {
+      padding: 10px;
+
+      &:hover {
+        color: $container;
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        transition: transform 200ms;
+        cursor: pointer;
+      }
+    }
+
+    .github {
+      padding: 10px;
+
+      &:hover {
+        color: $container;
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        transition: transform 200ms;
+        cursor: pointer;
+      }
+    }
+
+    .email {
+      padding: 12px;
+
+      &:hover {
+        color: $container;
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        transition: transform 400ms;
+        cursor: pointer;
+      }
+    }
+
+    .paperclip {
+      padding: 12px;
+
+      &:hover {
+        color: $container;
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        transition: transform 200ms;
+        cursor: pointer;
+      }
+    }
+  }
+
+
+
+}

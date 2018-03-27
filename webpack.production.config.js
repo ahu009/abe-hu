@@ -37,7 +37,7 @@ module.exports = {
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new HtmlWebpackPlugin({
-      template: './public/template.html',
+      template: './public/index.html',
       files: {
         js: ['bundle.js']
       }

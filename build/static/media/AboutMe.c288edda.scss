@@ -1,0 +1,130 @@
+@import './../_variables.scss';
+
+.mount {
+   color: $container;
+   background-color: 'ghostwhite';
+   border-radius: 8px;
+   border-color: $container;
+   border-width: 1.5px;
+   border-style: solid;
+   padding: 7px;
+   position: fixed;
+   top: 0;
+   right: 0;
+   margin-top: 10px;
+   margin-right: 10px;
+   opacity: 0.9;
+   transition: opacity 650ms ease-in-out, margin-right 650ms ease-in-out;
+   transition-delay: 300ms;
+  &:hover {
+    background-color: $container;
+    color: white;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+ .shown1 {
+    color: $container;
+    background-color: 'ghostwhite';
+    border-radius: 8px;
+    border-color: $container;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 7px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    opacity: 0.9;
+    transition: opacity 650ms ease-in-out, margin-right 650ms ease-in-out;
+    transition-delay: 1500ms;
+   &:hover {
+     background-color: $container;
+     color: white;
+     cursor: pointer;
+   }
+   &:focus {
+     outline: none;
+   }
+ }
+
+ .shown2 {
+    color: $container;
+    background-color: 'ghostwhite';
+    border-radius: 8px;
+    border-color: $container;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 7px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    opacity: 0.9;
+    transition: opacity 650ms ease-in-out, margin-right 650ms ease-in-out;
+    transition-delay:500ms;
+
+   &:hover {
+     background-color: $container;
+     color: white;
+     cursor: pointer;
+   }
+   &:focus {
+     outline: none;
+   }
+ }
+
+ .hidden2 {
+    color: $container;
+    z-index: -1;
+    background-color: 'ghostwhite';
+    border-radius: 8px;
+    border-color: $container;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 7px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    opacity: 0.01;
+    transition: opacity 650ms ease-in-out, margin-right 650ms ease-in-out;
+    transition-delay: 1s;
+
+   &:hover {
+     background-color: $container;
+     color: white;
+   }
+   &:focus {
+     outline: none;
+   }
+ }
+
+ .hidden1 {
+    color: $container;
+    z-index: -1;
+    background-color: 'ghostwhite';
+    border-radius: 8px;
+    border-color: $container;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 7px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    opacity: 0.01;
+    transition: opacity 650ms ease-in-out, margin-right 650ms ease-in-out;
+   &:hover {
+     background-color: $container;
+     color: white;
+   }
+   &:focus {
+     outline: none;
+   }
+ }
