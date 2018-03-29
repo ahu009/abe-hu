@@ -15,19 +15,14 @@ import Skills from './Skills/Skills';
  * @type {Class}
  */
 class InfoDisplay extends React.Component {
-
-  componentDidMount() {
-    var display = document.getElementById("wtfamidoing");
-    display.scrollIntoView({block: 'end',  behavior: 'smooth'});
-  }
-
   componentDidUpdate() {
+    let display = null;
     window.onbeforeunload = () => {
-      var display = document.getElementById("wtfamidoing2");
-      display.scrollIntoView({block: 'end',  behavior: 'smooth'});
+      window.scrollTo(0, 0);
     }
-    var display = document.getElementById("wtfamidoing");
-    display.scrollIntoView({block: 'end',  behavior: 'smooth'});
+    display = document.getElementById("wtfamidoing");
+    display ? display.scrollIntoView({block: 'end',  behavior: 'smooth'}) : null;
+    this.props.resume.isMobile ? window.scrollTo(0,0) : null;
   }
   /**
    * Render function for UIComponent Component
@@ -52,7 +47,6 @@ class InfoDisplay extends React.Component {
 
     return (
       <div>
-      <div id="wtfamidoing"></div>
       {
         this.props.resume.isMobile ?
           <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainerMobile : style.containerMobile}>
@@ -62,6 +56,7 @@ class InfoDisplay extends React.Component {
             <Skills />
           </div>
           : <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainer : style.container}>
+            <div id="wtfamidoing"></div>
             <Transition in={this.props.resume.active === "experience"}
               timeout={duration}
               unmountOnExit>
