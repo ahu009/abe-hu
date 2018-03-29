@@ -51,9 +51,9 @@ class InfoDisplay extends React.Component {
         this.props.resume.isMobile ?
           <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainerMobile : style.containerMobile}>
             <About isMobile={this.props.resume.isMobile}/>
-            <Experience />
-            <Projects />
-            <Skills />
+            <Experience isMobile={this.props.resume.isMobile}/>
+            <Projects isMobile={this.props.resume.isMobile}/>
+            <Skills isMobile={this.props.resume.isMobile}/>
           </div>
           : <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainer : style.container}>
             <div id="wtfamidoing"></div>

@@ -45,9 +45,12 @@ class About extends React.Component {
               </div>
             </div>
           <div className={style.titlebox}><span>Education</span></div>
-          <div className={this.state.transitionBody ? style.education : style.educationHide}>
+          <div className={this.state.transitionBody ?
+              this.props.isMobile ?
+                style.educationMobile : style.education
+              : style.educationHide}>
             <img alt='It is me' className={this.props.isMobile ? style.mobileucr : style.ucr} src={ucr} />
-            <div className={this.props.isMobile ? style.mobileAboutText2 : style.aboutText2}>
+            <div className={style.aboutText2}>
               <p className={style.schoolTitle}> University of California, Riverside </p>
               <p style={{color: '#98937D'}}> BS Computer Science, June 2018 </p>
               <p> Major GPA: 3.83 </p>

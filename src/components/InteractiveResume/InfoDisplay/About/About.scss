@@ -35,18 +35,6 @@
     height: 200px;
   }
 
-  .mobileAboutText2 {
-    margin-left: 20px;
-    margin-right: 10px;
-    font-size: smaller;
-    p {margin-top: 0; margin-bottom: 0}
-    .schoolTitle {
-      color: $container;
-      font-size: large;
-      opacity: 1;
-    }
-  }
-
   .aboutText2 {
     margin-left: 20px;
     margin-right: 10px;
@@ -54,6 +42,35 @@
     .schoolTitle {
       color: $container;
       font-size: 20px;
+      opacity: 1;
+    }
+  }
+
+}
+
+.educationMobile {
+  display: inline-grid;
+  transition: all 800ms ease-in-out;
+  width: 100%;
+
+  .mobileucr {
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 22px;
+    width: 250px;
+    height: 200px;
+  }
+
+  .aboutText2 {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 15px;
+    width: 250px;
+    padding-bottom: 20px;
+    p {margin-top: 0; margin-bottom: 0}
+    .schoolTitle {
+      color: $container;
+      font-size: 19px;
       opacity: 1;
     }
   }

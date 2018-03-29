@@ -36,7 +36,10 @@ class Experience extends React.Component {
     return (
       <div>
         <div className={style.titlebox}><span>My Professional Journey</span></div>
-        <div className={this.state.transitionBody ? style.education : style.educationHide}>
+        <div className={this.state.transitionBody ?
+            this.props.isMobile ?
+              style.educationMobile : style.education
+            : style.educationHide}>
           <img alt='Intuit' className={style.intuit} src={SI} />
           <div className={style.aboutText2}>
             <p className={style.schoolTitle}> UCR Academic Resource Center </p>
@@ -50,7 +53,10 @@ class Experience extends React.Component {
           </div>
         </div>
 
-        <div className={this.state.transitionBody ? style.education : style.educationHide}>
+        <div className={this.state.transitionBody ?
+            this.props.isMobile ?
+              style.educationMobile : style.education
+            : style.educationHide}>
           <img alt='Intuit' className={style.intuit} src={intuit} />
           <div className={style.aboutText2}>
             <p className={style.schoolTitle}> Intuit </p>
@@ -60,7 +66,10 @@ class Experience extends React.Component {
           </div>
         </div>
 
-        <div className={this.state.transitionBody ? style.education : style.educationHide}>
+        <div className={this.state.transitionBody ?
+            this.props.isMobile ?
+              style.educationMobile : style.education
+            : style.educationHide}>
           <img alt='Intuit' className={style.intuit} src={marklogic} />
           <div className={style.aboutText2}>
             <p className={style.schoolTitle}> MarkLogic </p>
@@ -69,7 +78,10 @@ class Experience extends React.Component {
           </div>
         </div>
 
-        <div className={this.state.transitionBody ? style.education : style.educationHide}>
+        <div className={this.state.transitionBody ?
+            this.props.isMobile ?
+              style.educationMobile : style.education
+            : style.educationHide}>
           <img alt='Intuit' className={style.intuit} src={nebula} />
           <div className={style.aboutText2}>
             <p className={style.schoolTitle}> Nebula Bay </p>
@@ -78,7 +90,10 @@ class Experience extends React.Component {
           </div>
         </div>
 
-        <div className={this.state.transitionBody ? style.education : style.educationHide}>
+        <div className={this.state.transitionBody ?
+            this.props.isMobile ?
+              style.educationMobile : style.education
+            : style.educationHide}>
           <img alt='Intuit' className={style.intuit} src={idtech} />
           <div className={style.aboutText2}>
             <p className={style.schoolTitle}> iD Tech </p>

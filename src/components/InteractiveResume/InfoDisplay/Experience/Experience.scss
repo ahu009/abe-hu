@@ -39,6 +39,35 @@
 
 }
 
+.educationMobile {
+  display: inline-grid;
+  transition: all 800ms ease-in-out;
+  width: 100%;
+
+  .intuit {
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 22px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .aboutText2 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 250px;
+    font-size: 14px;
+    padding-bottom: 20px;
+    p {margin-top: 0; margin-bottom: 0}
+    .schoolTitle {
+      color: $container;
+      font-size: 18px;
+      opacity: 1;
+    }
+  }
+
+}
+
 .titlebox {
     display:table;
     width:70%;
