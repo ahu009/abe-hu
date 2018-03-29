@@ -43,6 +43,7 @@ class AboutMe extends React.Component {
 
     return (
       <div>
+        <div id="wtfamidoing2"></div>
         <Button
           bsClass={showResume ? style.shown2 : style.hidden2}
           onClick={this.toggleShowResume}

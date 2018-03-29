@@ -40,15 +40,14 @@ class About extends React.Component {
               <div className={style.aboutText}>
                 <p>Taiwanese-American. Bay Area born and raised. </p>
                 <p>5-foot-10. Watches and analyzes sports but doesn't actually play most of them.
-                Lifts weights but never gets big. Also listens to mainstream music.</p>
+                Lifts weights but never gets big. </p>
                 <p>Yeah...I'm pretty average.</p>
-                <p> I was actually really scared in the background picture </p>
               </div>
             </div>
           <div className={style.titlebox}><span>Education</span></div>
           <div className={this.state.transitionBody ? style.education : style.educationHide}>
-            <img alt='It is me' className={style.ucr} src={ucr} />
-            <div className={style.aboutText2}>
+            <img alt='It is me' className={this.props.isMobile ? style.mobileucr : style.ucr} src={ucr} />
+            <div className={this.props.isMobile ? style.mobileAboutText2 : style.aboutText2}>
               <p className={style.schoolTitle}> University of California, Riverside </p>
               <p style={{color: '#98937D'}}> BS Computer Science, June 2018 </p>
               <p> Major GPA: 3.83 </p>

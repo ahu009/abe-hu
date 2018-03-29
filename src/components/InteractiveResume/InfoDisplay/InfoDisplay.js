@@ -16,12 +16,18 @@ import Skills from './Skills/Skills';
  */
 class InfoDisplay extends React.Component {
 
+  componentDidMount() {
+    var display = document.getElementById("wtfamidoing");
+    display.scrollIntoView({block: 'end',  behavior: 'smooth'});
+  }
 
   componentDidUpdate() {
-    if (!this.props.resume.isMobile) {
-      var display = document.getElementById("wtfamidoing");
+    window.onbeforeunload = () => {
+      var display = document.getElementById("wtfamidoing2");
       display.scrollIntoView({block: 'end',  behavior: 'smooth'});
     }
+    var display = document.getElementById("wtfamidoing");
+    display.scrollIntoView({block: 'end',  behavior: 'smooth'});
   }
   /**
    * Render function for UIComponent Component
@@ -46,6 +52,7 @@ class InfoDisplay extends React.Component {
 
     return (
       <div>
+      <div id="wtfamidoing"></div>
       {
         this.props.resume.isMobile ?
           <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainerMobile : style.containerMobile}>
@@ -55,7 +62,6 @@ class InfoDisplay extends React.Component {
             <Skills />
           </div>
           : <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainer : style.container}>
-            <div id="wtfamidoing"></div>
             <Transition in={this.props.resume.active === "experience"}
               timeout={duration}
               unmountOnExit>

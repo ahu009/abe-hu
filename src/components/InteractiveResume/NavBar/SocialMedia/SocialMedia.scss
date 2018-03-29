@@ -65,9 +65,64 @@
   }
 
   @media screen and (max-width: 950px) {
-    .social {
-      font-size: 15px;
+    .socialMobile {
+      color: 'grey';
+      border-radius: 3px;
+      display: table-caption;
+      font-size: 20px;
       transition: all 0.5s;
+
+      .linkedin {
+        padding: 14px;
+
+        &:hover {
+          color: $container;
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+          transition: transform 200ms;
+          cursor: pointer;
+        }
+      }
+
+      .github {
+        padding: 14px;
+
+        &:hover {
+          color: $container;
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+          transition: transform 200ms;
+          cursor: pointer;
+        }
+      }
+
+      .email {
+        padding: 15px;
+
+        &:hover {
+          color: $container;
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+          transition: transform 400ms;
+          cursor: pointer;
+        }
+      }
+
+      .paperclip {
+        padding: 15px;
+
+        &:hover {
+          color: $container;
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+          transition: transform 200ms;
+          cursor: pointer;
+        }
+      }
     }
   }
 

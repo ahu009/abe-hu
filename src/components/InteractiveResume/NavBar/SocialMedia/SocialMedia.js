@@ -22,7 +22,7 @@ class SocialMedia extends React.Component {
 
     return (
       <div className={style.container}>
-        <div className={style.social}>
+        <div className={this.props.isMobile ? style.socialMobile : style.social}>
           <FontAwesome className={style.linkedin} name="linkedin" onClick={() => this.navigate('https://www.linkedin.com/in/abe-hu-4a0b86102/')}/>
           <FontAwesome className={style.github} name="github-alt" onClick={() => this.navigate('https://github.com/ahu009')}/>
           <FontAwesome className={style.email} name="envelope" onClick={() => window.open('mailto:abehu88888@gmail.com')}/>

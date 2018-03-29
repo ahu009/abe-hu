@@ -1,14 +1,12 @@
 @import './../../_variables.scss';
 
  .container {
-   min-width: 150px;
-
-   width: 20%;
-   height: 80%;
+   width: 200px;
+   height: 100%;
 
    position: fixed;
    top: 13%;
-   left: 5%;
+   left: -100px;
 
    opacity: 0.01;
 
@@ -16,18 +14,17 @@
    background-color: #F7F7F7;
    border-radius: 10px;
    overflow: auto;
-   transition: all 750ms ease-in-out;
+   transition: left 750ms ease-in-out, opacity 750ms ease-in-out, height 300ms ease-in-out;
  }
 
  .showContainer {
-   min-width: 150px;
 
-   width: 20%;
-   height: 80%;
+   width: 200px;
+   height: 100%;
 
    position: fixed;
    top: 13%;
-   left: 7%;
+   left: 0;
 
    opacity: 0.9;
 
@@ -35,45 +32,40 @@
    background-color: #F7F7F7;
    border-radius: 10px;
    overflow: auto;
-   transition: all 750ms ease-in-out;
+   transition: left 750ms ease-in-out, opacity 750ms ease-in-out, height 300ms ease-in-out;
  }
 
- @media screen and (max-width: 1000px) {
-   .container {
-     min-width: 150px;
+ .showMobileNav {
 
-     width: 20%;
-     height: 80%;
+   width: 250px;
+   height: 200px;
 
-     position: fixed;
-     top: 13%;
-     left: 5%;
+   position: static;
+   margin: 60px auto 0px auto;
+   display: flex;
 
-     opacity: 0.01;
+   opacity: 0.9;
 
-     // background-color: #DAE2F5;
-     background-color: #F7F7F7;
-     border-radius: 10px;
-     overflow: auto;
-     transition: all 750ms ease-in-out;
-   }
+   // background-color: #DAE2F5;
+   background-color: #F7F7F7;
+   border-radius: 10px;
+   transition: margin 750ms ease-in-out, opacity 750ms ease-in-out;
+ }
 
-   .showContainer {
-     min-width: 150px;
+ .mobileNav {
 
-     width: 20%;
-     height: 80%;
+   width: 250px;
+   height: 200px;
 
-     position: fixed;
-     top: 13%;
-     left: 7%;
+   position: static;
+   margin: 50px auto 0px auto;
+   display: flex;
 
-     opacity: 0.9;
 
-     // background-color: #DAE2F5;
-     background-color: #F7F7F7;
-     border-radius: 10px;
-     overflow: auto;
-     transition: all 750ms ease-in-out;
-   }
+   opacity: 0.01;
+
+   // background-color: #DAE2F5;
+   background-color: #F7F7F7;
+   border-radius: 10px;
+   transition: margin 750ms ease-in-out, opacity 750ms ease-in-out;
  }

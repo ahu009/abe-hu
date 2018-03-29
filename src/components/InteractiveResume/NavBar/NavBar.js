@@ -21,19 +21,27 @@ class NavBar extends React.Component {
    * @return {JSX} Component to render
    */
   render () {
-    console.log(this.props.resume);
     return (
-      <div className={this.props.resume && this.props.resume === true ? style.showContainer : style.container}>
-        <Picture />
-        <SocialMedia />
-        <NavItems />
+      <div>
+      {
+        this.props.resume.isMobile ?
+        <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showMobileNav : style.mobileNav}>
+          <Picture />
+          <SocialMedia isMobile={this.props.resume.isMobile}/>
+        </div> :
+        <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainer : style.container}>
+          <Picture />
+          <SocialMedia />
+          <NavItems />
+        </div>
+      }
       </div>
     );
   }
 }
  
 const mapStateToProps = state => ({
-  resume: state.shouldShowResume || {},
+  resume: state || {},
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -52,11 +52,11 @@
 
 //rgba(137, 171, 206, 1)
 
-@media screen and (max-width: 600px) { /* Specific to this particular image */
+@media screen and (max-width: 770px) { /* Specific to this particular image */
   .titlebox {
-      left: 0;
+      left: 20px;
       width:125px;
-      position: initial;
+      position: fixed;
       top: 0;
       align-self: center;
       margin-top: 14px;

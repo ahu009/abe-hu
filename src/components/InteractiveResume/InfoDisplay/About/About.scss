@@ -16,20 +16,40 @@
 }
 
 .education {
-  display: table;
-  flex-direction: column;
-  opacity: 1;
-  padding-bottom: 20px;
+  display: inline-flex;
   transition: all 800ms ease-in-out;
-  .ucr {
-    border-radius: 200px;
+
+  .mobileucr {
+    border-radius: 22px;
     margin-left: 20px;
     float: left;
+    width: 200px;
+    height: 170px;
+  }
+
+  .ucr {
+    border-radius: 22px;
+    margin-left: 20px;
+    float: left;
+    width: 250px;
+    height: 200px;
+  }
+
+  .mobileAboutText2 {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: smaller;
+    p {margin-top: 0; margin-bottom: 0}
+    .schoolTitle {
+      color: $container;
+      font-size: large;
+      opacity: 1;
+    }
   }
 
   .aboutText2 {
-    padding: 1em 0;
-    margin-left: 320px;
+    margin-left: 20px;
+    margin-right: 10px;
     p {margin-top: 0; margin-bottom: 0}
     .schoolTitle {
       color: $container;
