@@ -18,8 +18,10 @@ class InfoDisplay extends React.Component {
 
 
   componentDidUpdate() {
-    var display = document.getElementById("wtfamidoing");
-    display.scrollIntoView({block: 'end',  behavior: 'smooth'});
+    if (!this.props.resume.isMobile) {
+      var display = document.getElementById("wtfamidoing");
+      display.scrollIntoView({block: 'end',  behavior: 'smooth'});
+    }
   }
   /**
    * Render function for UIComponent Component
@@ -43,58 +45,67 @@ class InfoDisplay extends React.Component {
     };
 
     return (
-      <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainer : style.container}>
-        <div id="wtfamidoing"></div>
-        <Transition in={this.props.resume.active === "experience"}
-          timeout={duration}
-          unmountOnExit>
-          {(state) => (
-            <div style={{
-              ...defaultStyle,
-              ...transitionStyles[state]
-            }}>
-              <Experience />
-            </div>
-          )}
-        </Transition>
-          <Transition in={this.props.resume.active === "about"}
-            timeout={duration}
-            unmountOnExit>
-            {(state) => (
-              <div style={{
-                ...defaultStyle,
-                ...transitionStyles[state]
-              }}>
-                <About />
-              </div>
-            )}
-          </Transition>
-
-          <Transition in={this.props.resume.active === "projects"}
-            timeout={duration}
-            unmountOnExit>
-            {(state) => (
-              <div style={{
-                ...defaultStyle,
-                ...transitionStyles[state]
-              }}>
-                <Projects />
-              </div>
-            )}
-          </Transition>
-
-          <Transition in={this.props.resume.active === "skills"}
-            timeout={duration}
-            unmountOnExit>
-            {(state) => (
-              <div style={{
-                ...defaultStyle,
-                ...transitionStyles[state]
-              }}>
-                <Skills />
-              </div>
-            )}
-          </Transition>
+      <div>
+      {
+        this.props.resume.isMobile ?
+          <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainerMobile : style.containerMobile}>
+            <About isMobile={this.props.resume.isMobile}/>
+            <Experience />
+            <Projects />
+            <Skills />
+          </div>
+          : <div className={this.props.resume.shouldShowResume && this.props.resume.shouldShowResume === true ? style.showContainer : style.container}>
+            <div id="wtfamidoing"></div>
+            <Transition in={this.props.resume.active === "experience"}
+              timeout={duration}
+              unmountOnExit>
+              {(state) => (
+                <div style={{
+                  ...defaultStyle,
+                  ...transitionStyles[state]
+                }}>
+                  <Experience />
+                </div>
+              )}
+            </Transition>
+              <Transition in={this.props.resume.active === "about"}
+                timeout={duration}
+                unmountOnExit>
+                {(state) => (
+                  <div style={{
+                    ...defaultStyle,
+                    ...transitionStyles[state]
+                  }}>
+                    <About isMobile={this.props.resume.isMobile}/>
+                  </div>
+                )}
+              </Transition>
+              <Transition in={this.props.resume.active === "projects"}
+                timeout={duration}
+                unmountOnExit>
+                {(state) => (
+                  <div style={{
+                    ...defaultStyle,
+                    ...transitionStyles[state]
+                  }}>
+                    <Projects />
+                  </div>
+                )}
+              </Transition>
+              <Transition in={this.props.resume.active === "skills"}
+                timeout={duration}
+                unmountOnExit>
+                {(state) => (
+                  <div style={{
+                    ...defaultStyle,
+                    ...transitionStyles[state]
+                  }}>
+                    <Skills />
+                  </div>
+                )}
+              </Transition>
+          </div>
+      }
       </div>
     );
   }

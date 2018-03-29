@@ -25,7 +25,7 @@ class Experience extends React.Component {
   }
 
   componentDidMount () {
-    setTimeout(() => this.setState({transitionBody: true}), 1000);
+    setTimeout(() => this.setState({transitionBody: true}), 500);
   }
 
   /**

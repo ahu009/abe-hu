@@ -15,6 +15,7 @@
    // background-color: #DAE2F5;
    background-color: #F7F7F7;
    border-radius: 10px;
+   overflow: auto;
    transition: all 750ms ease-in-out;
  }
 
@@ -33,5 +34,46 @@
    // background-color: #DAE2F5;
    background-color: #F7F7F7;
    border-radius: 10px;
+   overflow: auto;
    transition: all 750ms ease-in-out;
+ }
+
+ @media screen and (max-width: 1000px) {
+   .container {
+     min-width: 150px;
+
+     width: 20%;
+     height: 80%;
+
+     position: fixed;
+     top: 13%;
+     left: 5%;
+
+     opacity: 0.01;
+
+     // background-color: #DAE2F5;
+     background-color: #F7F7F7;
+     border-radius: 10px;
+     overflow: auto;
+     transition: all 750ms ease-in-out;
+   }
+
+   .showContainer {
+     min-width: 150px;
+
+     width: 20%;
+     height: 80%;
+
+     position: fixed;
+     top: 13%;
+     left: 7%;
+
+     opacity: 0.9;
+
+     // background-color: #DAE2F5;
+     background-color: #F7F7F7;
+     border-radius: 10px;
+     overflow: auto;
+     transition: all 750ms ease-in-out;
+   }
  }

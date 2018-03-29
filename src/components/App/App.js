@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { toggleIsMobile } from '../../actions';
+import _ from 'underscore';
 
 import style from './App.scss';
 import AboutMe from './../AboutMe';
@@ -12,6 +15,20 @@ import YosemiteAndMe from './assets/test.jpg';
  * @type {Class}
  */
 class App extends React.Component {
+
+  constructor (props) {
+    super(props);
+    this.throttledResize = _.throttle(this.resize.bind(this), 200);
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.throttledResize);
+    this.throttledResize();
+  }
+
+  resize() {
+    window.innerWidth <= 770 ? this.props.toggleIsMobile(true) : this.props.toggleIsMobile(false);
+  }
   /**
    * Render function for App Component
    * @return {JSX} Component to render
@@ -29,4 +46,12 @@ class App extends React.Component {
   }
 }
 
-export default App
+const mapStateToProps = state => ({
+  resume: state || {},
+}) 
+
+const mapDispatchToProps = dispatch => ({
+  toggleIsMobile: isMobile => dispatch(toggleIsMobile(isMobile))
+})
+ 
+export default connect(mapStateToProps, mapDispatchToProps)(App)

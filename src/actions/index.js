@@ -15,3 +15,12 @@ export function setActiveTab (active) {
     }));
   });
 }
+
+export function toggleIsMobile (isMobile) {
+  return dispatch => new Promise((resolve) => {
+    return resolve(dispatch({
+      type: 'TOGGLE_IS_MOBILE',
+      isMobile: isMobile
+    }));
+  });
+}

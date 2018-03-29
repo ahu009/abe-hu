@@ -1,9 +1,6 @@
 @import './../../_variables.scss';
 
- #wtfamidoing {
-   display: none;
- }
-
+#wtfamidoing{}
  .container {
    min-width: 150px;
 
@@ -11,28 +8,27 @@
    height: 90%;
 
    position: fixed;
-   top: 9%;
+   margin-top: 60px;
    right: 5%;
 
    opacity: 0.01;
    // background-color: #DAE2F5;
    background-color: #F7F7F7;
    border-radius: 10px;
-   transition: all 750ms ease-in-out;
+   transition: opacity 750ms ease-in-out, margin-top 750ms ease-in-out, right 750ms ease-in-out;
    transition-delay: 650ms;
    overflow-x: scroll;
    overflow-y: scroll;
  }
 
  .showContainer {
-   margin-left: 15px;
    min-width: 150px;
 
    width: 65%;
    height: 90%;
 
    position: fixed;
-   top: 9%;
+   margin-top: 60px;
    right: 7%;
 
    // background-color: #DAE2F5;
@@ -40,8 +36,42 @@
    border-radius: 10px;
 
    opacity: 0.9;
-   transition: all 750ms ease-in-out;
+   transition: opacity 750ms ease-in-out, margin-top 750ms ease-in-out, right 750ms ease-in-out;
    transition-delay: 650ms;
    overflow-x: scroll;
    overflow-y: scroll;
  }
+
+
+   .containerMobile {
+     min-width: 150px;
+
+     width: 100%;
+     left: 0;
+     margin-top: 90px;
+     position: static;
+     display: inline-block;
+     opacity: 0.01;
+     // background-color: #DAE2F5;
+     background-color: #F7F7F7;
+     border-radius: 10px;
+     transition: opacity 750ms ease-in-out, margin-top 750ms ease-in-out;
+     overflow-x: scroll;
+     overflow-y: scroll;
+   }
+
+   .showContainerMobile {
+     min-width: 150px;
+
+     width: 100%;
+     margin-top: 120px;
+     position: static;
+     display: inline-block;
+     opacity: 0.9;
+     // background-color: #DAE2F5;
+     background-color: #F7F7F7;
+     border-radius: 10px;
+     transition: opacity 750ms ease-in-out, margin-top 750ms ease-in-out;
+     overflow-x: scroll;
+     overflow-y: scroll;
+   }

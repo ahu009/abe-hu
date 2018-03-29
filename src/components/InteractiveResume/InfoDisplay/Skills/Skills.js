@@ -45,6 +45,9 @@ class Skills extends React.Component {
           		<div className={shouldTransition ? style.react : style.base}>React</div>
           	</div>
             <div className={style.wrapper}>
+          		<div className={shouldTransition ? style.reactNative : style.base}>React-Native</div>
+          	</div>
+            <div className={style.wrapper}>
           		<div className={shouldTransition ? style.selenium : style.base}>Selenium</div>
           	</div>
             <div className={style.wrapper}>
@@ -53,7 +56,7 @@ class Skills extends React.Component {
             <div className={style.wrapper}>
           		<div className={shouldTransition ? style.SQL : style.base}>SQL</div>
           	</div>
-            <div style={{margin: 40}}> </div>
+            <div style={{margin: 25}}> </div>
             <p className={style.skillCTG}>Others</p>
           	<div className={style.wrapper}>
           		<div className={shouldTransition ? style.Git : style.base}>Git</div>

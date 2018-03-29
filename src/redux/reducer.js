@@ -12,6 +12,12 @@ const resume = (state = {}, action) => {
         active: action.active,
       }
     }
+    case 'TOGGLE_IS_MOBILE': {
+      return {
+        ...state,
+        isMobile: action.isMobile,
+      }
+    }
     default:
       return state
   }

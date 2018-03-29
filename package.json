@@ -16,7 +16,8 @@
     "docs-deploy": "npm run docs && gh-pages -d generated_docs -m '[STAR-1560] gh-pages docs updated.'",
     "test": "ava",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "webpack": "webpack-dev-server --progress --profile --colors"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,8 @@
     "react-transition-group": "^2.2.1",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "underscore": "^1.8.3"
   },
   "ava": {
     "require": [

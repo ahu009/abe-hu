@@ -29,7 +29,7 @@ class Projects extends React.Component {
   }
 
   componentDidMount () {
-    setTimeout(() => this.setState({transitionBody: true}), 900);
+    setTimeout(() => this.setState({transitionBody: true}), 500);
   }
   /**
    * Toggle

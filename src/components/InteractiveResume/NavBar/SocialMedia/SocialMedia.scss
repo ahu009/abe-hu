@@ -9,6 +9,7 @@
     color: 'grey';
     border-radius: 3px;
     font-size: 25px;
+    transition: all 0.5s;
 
     .linkedin {
       padding: 10px;
@@ -63,6 +64,12 @@
     }
   }
 
+  @media screen and (max-width: 950px) {
+    .social {
+      font-size: 15px;
+      transition: all 0.5s;
+    }
+  }
 
 
 }

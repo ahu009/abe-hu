@@ -21,7 +21,11 @@ class About extends React.Component {
   }
 
   componentDidMount () {
-    setTimeout(() => this.setState({transitionBody: true}), 1050);
+    if (this.props.isMobile === false) {
+      setTimeout(() => this.setState({transitionBody: true}), 500);
+    } else {
+      this.setState({transitionBody: true});
+    }
   }
 
   /**
@@ -47,8 +51,8 @@ class About extends React.Component {
             <div className={style.aboutText2}>
               <p className={style.schoolTitle}> University of California, Riverside </p>
               <p style={{color: '#98937D'}}> BS Computer Science, June 2018 </p>
-              <p> Major GPA: 3.8 </p>
-              <p> Cumulative GPA: 3.66 </p>
+              <p> Major GPA: 3.83 </p>
+              <p> Cumulative GPA: 3.67 </p>
               <p> 8x Deans Honor List, Chancellors Honors List </p>
             </div>
           </div>
