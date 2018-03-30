@@ -1,4 +1,4 @@
-
+@import './../_variables.scss';
 
 .container {
   font-family: sans-serif;
@@ -48,4 +48,71 @@
       z-index: -1;
     }
   }
+
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+  }
+
+  .modal .modalBody {
+    background: #ffffff;
+    max-width: 500px;
+    margin: 2rem;
+    padding: 2rem;
+    z-index: 2;
+    position: relative;
+    box-shadow: 5px 5px 25px #666666;
+  }
+  .modal .modalbg {
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  }
+
+  .blur {
+    -webkit-filter: url(#blur-filter);
+    filter: url(#blur-filter);
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+
+  }
+
+  .modal .modalBody .shown2 {
+     color: $container;
+     background-color: 'ghostwhite';
+     border-radius: 8px;
+     border-color: $container;
+     border-width: 1.5px;
+     border-style: solid;
+     padding: 7px;
+     opacity: 0.9;
+
+     transition: background-color 300ms ease-in-out;
+     margin: 7px 23px;
+
+    &:hover {
+      background-color: $container;
+      color: white;
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+
 }
