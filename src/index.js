@@ -8,7 +8,7 @@ import store from './redux/store.js';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-render(<Provider store={store}><AppContainer><App/></AppContainer></Provider>, document.querySelector('#app'));
+render(<Provider store={store}><AppContainer><App/></AppContainer></Provider>, document.querySelector('#clock'));
 
 if (module && module.hot) {
   module.hot.accept('./', () => {
@@ -18,7 +18,7 @@ if (module && module.hot) {
           <App/>
         </AppContainer>
       </Provider>,
-      document.querySelector('#app')
+      document.querySelector('#clock')
     );
   });
 }

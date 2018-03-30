@@ -1,0 +1,135 @@
+* {
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+body {
+	display:flex;
+	justify-content: space-around;
+	align-content: space-around;
+	flex-wrap: wrap;
+	overflow-x: hidden;
+	background-color: #89ABCE;
+}
+
+.loader {
+	width:200px;
+	height: 200px;
+	overflow: hidden;
+	position: fixed;
+	top: calc(50% - 100px);
+	left: calc(50% - 100px);
+
+}
+
+.container {
+	position:relative;
+	width: 96%;
+	height: 96%;
+	top:2%;
+	left: 2%;
+}
+
+.ball {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	width: 30px;
+	height:30px;
+	transform: translate(-50%, -50%);
+	background-color: #222;
+	border-radius: 50%;
+}
+
+
+.loader .container {
+	height: 100%;
+	width: 100%;
+	animation-name: spinner;
+	animation-duration: 4s;
+	animation-timing-function: ease-out;
+	animation-delay: 0.3s;
+}
+
+.loader .container:before {
+	content: " ";
+	display: block;
+	height: 40px;
+	width: 40px;
+	border: 3px solid #222;
+	border-radius: 50%;
+	background-color: #fff;
+	z-index:900;
+	top: 50%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+}
+
+.loader .container:after {
+	content: " ";
+	display: block;
+	height: 36px;
+	width: 36px;
+	border-radius: 50%;
+	background-color: #222;
+	z-index:900;
+	top: 50%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+}
+
+.loader .ball {
+	border: 3px solid #222;
+	height: 50px;
+	border-radius: 35px 35px 0 0;
+	border-bottom:none;
+	position:absolute;
+	background-color: #fff;
+	top:31.5%;
+	left: 50%;
+	transform: rotate(360deg) translate(-50%, -50%)
+}
+
+.loader .ball:before {
+	content: " ";
+	display: block;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background-color: #222;
+	z-index:500;
+	top: 30%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	border:2px solid #fff;
+}
+
+.loader .ball:after {
+	content: " ";
+	display: block;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	background-color: #222;
+	z-index:300;
+	top: 30%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+}
+
+.loader .ball2 {
+	transform: rotate(120deg) translate(50%, -50%)
+}
+
+.loader .ball3 {
+	transform: rotate(240deg) translate(0%, -107%)
+}
+
+@keyframes spinner {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(2160deg); }
+}
