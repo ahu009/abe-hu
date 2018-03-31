@@ -57,7 +57,7 @@
       -ms-transform: translate(-50%, -50%);
       opacity: 0;
       color: $container;
-      background-color: 'ghostwhite';
+      background-color: ghostwhite;
       border-radius: 8px;
       border-color: $container;
       border-width: 1.5px;
@@ -80,16 +80,17 @@
 }
 
 .educationMobile {
-  display: inline-grid;
+  display: table;
   width: 100%;
-  padding-bottom: 20px;
   transition: opacity 800ms ease-in-out, padding-left 800ms ease-in-out;
+  margin-bottom: 30px;
   .container {
-    position: relative;
-    display: inline-block;
+    display: table;
     margin: 0 auto;
     border-radius: 20px;
-    float: left;
+    width: 250px;
+    height: 250px;
+    position: relative;
     .intuit {
       width: 250px;
       height: 250px;
@@ -112,14 +113,14 @@
     .button {
       top: 50%;
       left: 50%;
-      width: 80%;
+      width: 50%;
       position: absolute;
       transition: all 0.5s ease;
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       opacity: 0;
       color: $container;
-      background-color: 'ghostwhite';
+      background-color: ghostwhite;
       border-radius: 8px;
       border-color: $container;
       border-width: 1.5px;
@@ -132,6 +133,7 @@
 
   .aboutText2 {
     width: 260px;
+    display: table;
     margin: 0 auto;
     p {margin-top: 0; margin-bottom: 0}
     .schoolTitle {

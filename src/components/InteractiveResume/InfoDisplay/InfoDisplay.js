@@ -22,7 +22,7 @@ class InfoDisplay extends React.Component {
     }
     display = document.getElementById("wtfamidoing");
     display ? display.scrollIntoView({block: 'end',  behavior: 'smooth'}) : null;
-    this.props.resume.isMobile ? window.scrollTo(0,0) : null;
+    // this.props.resume.isMobile ? window.scrollTo(0,0) : null;
   }
   /**
    * Render function for UIComponent Component

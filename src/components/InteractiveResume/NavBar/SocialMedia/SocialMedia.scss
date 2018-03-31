@@ -1,7 +1,6 @@
 @import './../../../_variables.scss';
 
 .container {
-  width: 100%;
   text-align: center;
   top: 10%;
 
@@ -66,11 +65,10 @@
 
   @media screen and (max-width: 950px) {
     .socialMobile {
-      color: 'grey';
       border-radius: 3px;
-      display: table-caption;
       font-size: 20px;
       transition: all 0.5s;
+      width: 20px !important;
 
       .linkedin {
         padding: 14px;

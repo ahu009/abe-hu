@@ -3,6 +3,7 @@
  .container {
    width: 200px;
    height: 100%;
+   visibility: hidden;
 
    position: fixed;
    top: 13%;
@@ -14,13 +15,15 @@
    background-color: #F7F7F7;
    border-radius: 10px;
    overflow: auto;
-   transition: left 750ms ease-in-out, opacity 750ms ease-in-out, height 300ms ease-in-out;
+   transition: left 750ms ease-in-out, opacity 750ms ease-in-out, height 300ms ease-in-out, visibility 750ms ease-in-out;
  }
 
  .showContainer {
 
    width: 200px;
    height: 100%;
+   visibility: visible;
+
 
    position: fixed;
    top: 13%;
@@ -32,13 +35,15 @@
    background-color: #F7F7F7;
    border-radius: 10px;
    overflow: auto;
-   transition: left 750ms ease-in-out, opacity 750ms ease-in-out, height 300ms ease-in-out;
+   transition: left 750ms ease-in-out, opacity 750ms ease-in-out, height 300ms ease-in-out, visibility 750ms ease-in-out;
  }
 
  .showMobileNav {
 
    width: 250px;
    height: 200px;
+   visibility: visible;
+
 
    position: static;
    margin: 60px auto 0px auto;
@@ -49,13 +54,15 @@
    // background-color: #DAE2F5;
    background-color: #F7F7F7;
    border-radius: 10px;
-   transition: margin 750ms ease-in-out, opacity 750ms ease-in-out;
+   transition: margin 750ms ease-in-out, opacity 750ms ease-in-out, visibility 750ms ease-in-out;
  }
 
  .mobileNav {
 
    width: 250px;
    height: 200px;
+   visibility: hidden;
+
 
    position: static;
    margin: 50px auto 0px auto;
@@ -67,5 +74,5 @@
    // background-color: #DAE2F5;
    background-color: #F7F7F7;
    border-radius: 10px;
-   transition: margin 750ms ease-in-out, opacity 750ms ease-in-out;
+   transition: margin 750ms ease-in-out, opacity 750ms ease-in-out, visibility 750ms ease-in-out;
  }

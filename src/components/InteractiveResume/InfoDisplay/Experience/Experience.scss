@@ -40,12 +40,12 @@
 }
 
 .educationMobile {
-  display: inline-grid;
+  display: table;
   transition: all 800ms ease-in-out;
   width: 100%;
 
   .intuit {
-    display: inline-block;
+    display: table;
     margin: 0 auto;
     border-radius: 22px;
     width: 250px;
@@ -53,7 +53,7 @@
   }
 
   .aboutText2 {
-    display: inline-block;
+    display: table;
     margin: 0 auto;
     width: 250px;
     font-size: 14px;

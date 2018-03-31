@@ -49,12 +49,12 @@
 }
 
 .educationMobile {
-  display: inline-grid;
+  display: table;
   transition: all 800ms ease-in-out;
   width: 100%;
 
   .mobileucr {
-    display: inline-block;
+    display: table;
     margin: 0 auto;
     border-radius: 22px;
     width: 250px;
@@ -62,7 +62,7 @@
   }
 
   .aboutText2 {
-    display: inline-block;
+    display: table;
     margin: 0 auto;
     font-size: 15px;
     width: 250px;
