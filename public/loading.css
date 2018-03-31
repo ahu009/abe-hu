@@ -10,6 +10,7 @@ body {
 	flex-wrap: wrap;
 	overflow-x: hidden;
 	background-color: #89ABCE;
+	transition: all 1000ms ease-in-out;
 }
 
 .loader {

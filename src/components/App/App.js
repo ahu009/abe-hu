@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Transition } from 'react-transition-group';
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap';
 import { toggleIsMobile } from '../../actions';
@@ -27,6 +28,7 @@ class App extends React.Component {
     this.state = {
       showModal: false,
       isLoading: true,
+      isLoading2: true,
     }
     this.throttledResize = _.throttle(this.resize.bind(this), 200);
   }
@@ -34,10 +36,11 @@ class App extends React.Component {
   componentDidMount() {
     window.addEventListener("resize", this.throttledResize);
     this.throttledResize();
-    if (browser.name != "chrome") {
+    if (browser.name != "chrome" && browser.name != "safari" && browser.name != "firefox") {
       this.setState({showModal: true});
     }
-    setTimeout(() => this.setState({isLoading: false}), 50);
+    setTimeout(() => this.setState({isLoading: false}), 500);
+    setTimeout(() => this.setState({isLoading2: false}), 50);
   }
 
   resize() {
@@ -48,17 +51,61 @@ class App extends React.Component {
    * @return {JSX} Component to render
    */
   render () {
+    const defaultStyle = {
+      transition: `all ${900}ms ease-in-out`,
+      opacity: 1,
+    };
+
+    const defaultStyle2 = {
+      transition: `all ${1000}ms ease-in-out`,
+      opacity: 1,
+    };
+
+    const transitionStylesSpinner = {
+      entering: { opacity: 1},
+      entered: { opacity: 1},
+      exiting: { opacity: 0}
+    };
+
+    const transitionStylesBackground = {
+      entering: { opacity: 0},
+      entered: { opacity: 1},
+      exiting: { opacity: 1}
+    };
     return (
       <div className={style.container}>
-      {this.state.isLoading ? <Loading /> : null}
-      <img alt='It is me' className={style.me} src={YosemiteAndMe} />
+      <Transition in={this.state.isLoading}
+        timeout={1000}
+        unmountOnExit>
+        {(state) => (
+          <div style={{
+            ...defaultStyle,
+            ...transitionStylesSpinner[state]
+          }}>
+             <Loading />
+          </div>
+        )}
+      </Transition>
+      <Transition in={!this.state.isLoading2}
+        timeout={200}
+        unmountOnExit>
+        {(state) => (
+          <div style={{
+            ...defaultStyle2,
+            ...transitionStylesBackground[state]
+          }}>
+             <img alt='It is me' className={style.me} src={YosemiteAndMe} />
+          </div>
+        )}
+      </Transition>
+
       <Name />
       {
         this.state.showModal ?
           <div id="modal" className={style.modal}>
             <div className={style.modalBody}>
               <h2>Warning!</h2>
-              <p>My website is optimized for Chrome. Other browsers may have weird behavior.</p>
+              <p>My website is not optimized for your browser. You may see some weird behavior.</p>
               <Button bsClass={style.shown2} onClick={() => window.location.href="https://www.linkedin.com/in/abe-hu-4a0b86102/"}> Get Me Out Of Here </Button>
               <Button bsClass={style.shown2} onClick={() => this.setState({showModal: false})}> Let me see this atrocity </Button>
             </div>
