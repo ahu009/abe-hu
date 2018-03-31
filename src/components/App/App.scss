@@ -2,6 +2,8 @@
 
 .container {
   font-family: sans-serif;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   img.me {
   /* Set rules to fill background */
@@ -17,8 +19,6 @@
   top: 0;
   left: 0;
   z-index: -1;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 .infotab {

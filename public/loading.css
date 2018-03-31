@@ -48,7 +48,6 @@ body {
 	animation-name: spinner;
 	animation-duration: 4s;
 	animation-timing-function: ease-out;
-	animation-delay: 0.3s;
 }
 
 .loader .container:before {

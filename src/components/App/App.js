@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap';
 import { toggleIsMobile } from '../../actions';
@@ -11,6 +12,7 @@ import AboutMe from './../AboutMe';
 import NavBar from './../InteractiveResume/NavBar';
 import InfoDisplay from './../InteractiveResume/InfoDisplay';
 import Name from './../Name/Name';
+import Loading from './Loading/Loading';
 import YosemiteAndMe from './assets/test.jpg';
 
 
@@ -24,6 +26,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       showModal: false,
+      isLoading: true,
     }
     this.throttledResize = _.throttle(this.resize.bind(this), 200);
   }
@@ -34,6 +37,7 @@ class App extends React.Component {
     if (browser.name != "chrome") {
       this.setState({showModal: true});
     }
+    setTimeout(() => this.setState({isLoading: false}), 50);
   }
 
   resize() {
@@ -46,6 +50,7 @@ class App extends React.Component {
   render () {
     return (
       <div className={style.container}>
+      {this.state.isLoading ? <Loading /> : null}
       <img alt='It is me' className={style.me} src={YosemiteAndMe} />
       <Name />
       {
