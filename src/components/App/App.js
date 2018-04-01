@@ -74,30 +74,35 @@ class App extends React.Component {
     };
     return (
       <div className={style.container}>
-      <Transition in={this.state.isLoading}
-        timeout={1000}
-        unmountOnExit>
-        {(state) => (
-          <div style={{
-            ...defaultStyle,
-            ...transitionStylesSpinner[state]
-          }}>
-             <Loading />
-          </div>
-        )}
-      </Transition>
-      <Transition in={!this.state.isLoading2}
-        timeout={200}
-        unmountOnExit>
-        {(state) => (
-          <div style={{
-            ...defaultStyle2,
-            ...transitionStylesBackground[state]
-          }}>
-             <img alt='It is me' className={style.me} src={YosemiteAndMe} />
-          </div>
-        )}
-      </Transition>
+      {
+        !this.props.resume.isMobile ?
+          <div>
+            <Transition in={this.state.isLoading}
+              timeout={1000}
+              unmountOnExit>
+              {(state) => (
+                <div style={{
+                  ...defaultStyle,
+                  ...transitionStylesSpinner[state]
+                }}>
+                   <Loading />
+                </div>
+              )}
+            </Transition>
+            <Transition in={!this.state.isLoading2}
+              timeout={200}
+              unmountOnExit>
+              {(state) => (
+                <div style={{
+                  ...defaultStyle2,
+                  ...transitionStylesBackground[state]
+                }}>
+                   <img alt='It is me' className={style.me} src={YosemiteAndMe} />
+                </div>
+              )}
+            </Transition>
+          </div> : <img alt='It is me' className={style.me} src={YosemiteAndMe} />
+        }
 
       <Name />
       {
