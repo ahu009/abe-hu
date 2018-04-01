@@ -1,4 +1,9 @@
-# Starter Kit Guide
+# My Personal Website
+#### Mobile App to organize your appointments
+##### -- React, Redux, Webpack
+
+<img src="https://i.imgur.com/g5qXxbP.gif" height="300"/>
+
 ### How to Run
 - Fork or Clone Repository
 - cd into repo
@@ -15,4 +20,5 @@ For npm:
 npm install;
 npm start;
 ```
-- Starter Kit should run a simple 'Hello World' app on port: http://127.0.0.1:8888/
+
+- App will run on port: http://127.0.0.1:8888/
