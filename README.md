@@ -1,7 +1,7 @@
 # My Personal Website
 ##### -- React, Redux, Webpack
 
-<img src="https://i.imgur.com/g5qXxbP.gif" height="300"/>
+<img src="https://i.imgur.com/g5qXxbP.gif"/>
 
 ### How to Run
 - Fork or Clone Repository
@@ -11,13 +11,13 @@
 For Yarn:
 ```
 yarn install;
-yarn start;
+yarn run webpack;
 ```
 
 For npm:
 ```
 npm install;
-npm start;
+npm run webpack;
 ```
 
 - App will run on port: http://127.0.0.1:8888/
