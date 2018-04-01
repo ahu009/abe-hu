@@ -1,5 +1,4 @@
 # My Personal Website
-#### Mobile App to organize your appointments
 ##### -- React, Redux, Webpack
 
 <img src="https://i.imgur.com/g5qXxbP.gif" height="300"/>
