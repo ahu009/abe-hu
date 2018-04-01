@@ -1,7 +1,7 @@
 # My Personal Website
 ##### -- React, Redux, Webpack
 
-<img src="https://i.imgur.com/g5qXxbP.gif"/>
+Link: abehu.me
 
 ### How to Run
 - Fork or Clone Repository
