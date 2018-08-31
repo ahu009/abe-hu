@@ -35,7 +35,7 @@ class About extends React.Component {
   render () {
     return (
         <div>
-          <div className={style.titlebox}><span>Just your average dude</span></div>
+          <div className={style.titlebox}><span>About Me</span></div>
             <div className={this.state.transitionBody ? style.education : style.educationHide}>
               <div className={style.aboutText}>
                 <p>Taiwanese-American. Bay Area born and raised. </p>

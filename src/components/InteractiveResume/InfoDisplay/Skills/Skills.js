@@ -34,7 +34,7 @@ class Skills extends React.Component {
           <div className={style.titlebox}><span>Skills</span></div>
 
           <div className={style.container}>
-            <p className={style.skillCTG}>Languages and Frameworks</p>
+            <div className={style.skillCTG}>Languages and Frameworks</div>
           	<div className={style.wrapper}>
           		<div className={shouldTransition ? style.c : style.base}>C++</div>
           	</div>
@@ -57,7 +57,7 @@ class Skills extends React.Component {
           		<div className={shouldTransition ? style.SQL : style.base}>SQL</div>
           	</div>
             <div style={{margin: 25}}> </div>
-            <p className={style.skillCTG}>Others</p>
+            <div className={style.skillCTG}>Others</div>
           	<div className={style.wrapper}>
           		<div className={shouldTransition ? style.Git : style.base}>Git</div>
           	</div>

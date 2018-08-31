@@ -4,12 +4,15 @@
   font-size: 20px;
   font-family:Roboto,sans-serif;
   color: black;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .wrapper{
 	background-color:$containerLight;
   border-radius:5px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .container{
@@ -30,6 +33,9 @@
   width: 100px;
   overflow-x: none;
   color:white;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 .javascript{background-color:#1D1F20}
 .base,
@@ -45,7 +51,9 @@
   -webkit-transform: translateZ(0);
   border-radius:5px;
   padding-left: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .javaScript{
@@ -59,7 +67,9 @@
   border-radius:5px;
   padding-left: 15px;
   padding-right: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .java{
@@ -73,7 +83,9 @@
   border-radius:5px;
   padding-left: 15px;
   padding-right: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .SQL{
@@ -87,7 +99,9 @@
   border-radius:5px;
   padding-right: 15px;
   padding-left: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .react{
@@ -101,7 +115,9 @@
   border-radius:5px;
   padding-left: 15px;
   padding-right: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .reactNative{
@@ -115,7 +131,9 @@
   border-radius:5px;
   padding-left: 15px;
   padding-right: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow-x: none;
@@ -133,7 +151,9 @@
   border-radius:5px;
   padding-left: 15px;
   padding-right: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .Git{
@@ -147,7 +167,9 @@
   border-radius:5px;
   padding-left: 15px;
   padding-right: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .FireBase{
@@ -161,7 +183,9 @@
   border-radius:5px;
   padding-left: 15px;
   padding-right: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 
@@ -176,7 +200,11 @@
   border-radius:5px;
   padding-left: 15px;
   padding-right: 15px;
-  color:ghostwhite;
+  color:white;
+  font-style: italic;
+  color:white;
+  font-style: italic;
+  font-size: 20px;
 }
 
 
